@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: hsl(240, 78%, 98%);
+    max-width: 1440px;
+    width: 100vw;
+    height: 110vh;
+    font-size: 15px;
+    font-weight: 700;
+    color: hsl(233, 13%, 49%);
+    font-family: 'Montserrat', sans-serif;
+  }
+/**** header ***/
+header {
+    display: flex;
+    flex-direction: column;
+    height: 35vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: 5vh 0;
+} 
+/***** Toggle Styles ***/
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  .slider:hover {
+    background: hsl(236, 72%, 79%);
+    cursor: pointer;
+  }
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px ;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  .toggle-container {
+      display: flex;
+      align-items: center;
+      width: 20%;
+      justify-content: space-around;
+      color: hsl(234, 14%, 74%);
+  }
+
+.container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.bg-top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 28vw;
+    height: 75%;
+}
+.bg-bottom {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    height: 40%;
+}
+.price-divs {
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 8px 8px 0 linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+  width: 25%;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  border-radius: 6px;
+  z-index: 1;
+  padding: 20px 0;
+}
+hr {
+  width: 80%;
+  height: 0.5px;
+  color: hsl(234, 14%, 74%);
+}
+button {
+  padding: 7px 25%;
+  color: white;
+  border: none;
+  background:  linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  border-radius: 5px;
+}
+button:hover {
+color: hsl(237, 63%, 64%);
+border: thin solid hsl(237, 63%, 64%);
+background: white;
+cursor: pointer;
+}
+.professional {
+  height: 65vh;
+  background: linear-gradient(to bottom, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color: white;
+}
+.professional hr {
+  color: white;
+}
+.professional button {
+  background: white;
+  color: hsl(237, 63%, 64%);
+}
+.professional button:hover {
+  color: white;
+  border: thin solid white;
+  background: hsl(237, 63%, 64%);
+  cursor: pointer;
+  }
+.amount {
+  color:  hsl(232, 13%, 33%);
+  font-size: 70px;
+}
+.professional .amount {
+  color: white;
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    margin-top: 30px; 
+}
+.attribution a {
+     color: hsl(228, 45%, 44%);
+     }
+
+/***** Mobile Design ***/
+@media screen and (max-width: 375px) {
+  body {
+    max-width: 375px;
+    width: 100vw;
+    height: 110vh;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+    height: 35vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: 5vh 0;
+ }
+ .toggle-container {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  justify-content: space-around;
+}
+.bg-top {
+  position: absolute;
+  top: 0px;
+  right: -155px;
+  width: 90vw;
+  height: 90%;
+}
+.bg-bottom {
+  display: none;
+}
+.price-divs {
+width: 100vw;
+height: 250vh;
+display: flex;
+flex-direction: column;
+flex-wrap: nowrap;
+justify-content: space-around;
+}
+.price {
+  display: flex;
+  flex-direction: column;
+  height: 75vh;
+  width: 80%;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  border-radius: 6px;
+  z-index: 1;
+  padding: 20px 0;
+  margin: 0 auto;
+}
+.attribution { 
+  
+  margin: 30px 0; 
+}
+}
